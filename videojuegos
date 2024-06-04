@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura de Videojuegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .game {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cultura de Videojuegos</h1>
+</header>
+
+<div class="container">
+    <?php
+    // Array de videojuegos populares
+    $videojuegos = [
+        [
+            "titulo" => "The Legend of Zelda: Breath of the Wild",
+            "descripcion" => "Un juego de acción y aventura desarrollado por Nintendo. Los jugadores exploran el reino de Hyrule mientras controlan a Link en su misión para derrotar a Calamity Ganon.",
+            "imagen" => "zelda.jpg"
+        ],
+        [
+            "titulo" => "Super Mario Odyssey",
+            "descripcion" => "Un juego de plataformas en 3D desarrollado por Nintendo. Mario viaja por diferentes reinos para rescatar a la Princesa Peach de Bowser.",
+            "imagen" => "mario.jpg"
+        ],
+        [
+            "titulo" => "The Witcher 3: Wild Hunt",
+            "descripcion" => "Un juego de rol de acción desarrollado por CD Projekt Red. Los jugadores controlan a Geralt de Rivia, un cazador de monstruos conocido como Witcher, en su búsqueda para encontrar a su hija adoptiva.",
+            "imagen" => "witcher3.jpg"
+        ],
+        [
+            "titulo" => "Minecraft",
+            "descripcion" => "Un juego de construcción sandbox desarrollado por Mojang Studios. Los jugadores pueden construir y explorar mundos generados aleatoriamente utilizando bloques.",
+            "imagen" => "minecraft.jpg"
+        ]
+    ];
+
+    // Mostrar información de cada videojuego
+    foreach ($videojuegos as $videojuego) {
+        echo "<div class='game'>";
+        echo "<h2>" . $videojuego["titulo"] . "</h2>";
+        echo "<p>" . $videojuego["descripcion"] . "</p>";
+        echo "<img src='images/" . $videojuego["imagen"] . "' alt='" . $videojuego["titulo"] . "' style='width:100%; height:auto;'>";
+        echo "</div>";
+    }
+    ?>
+</div>
+
+</body>
+</html>
